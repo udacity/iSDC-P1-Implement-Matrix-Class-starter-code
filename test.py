@@ -70,7 +70,7 @@ def test():
     assert type(I2.inverse()) == type(I2), """Error: Your inverse function for the 2 x 2 case does not return a Matrix"""
     assert type(top_ones.T()) == type(left_ones), "Error: Your T function (transpose) does not return a Matrix"
     assert type(left_ones.T()) == type(top_ones), "Error: Your T function (transpose) does not return a Matrix"
-    assert type(top_ones - left_ones.T() == type(m.zeroes(2,2))), "Error: Your __sub__ function does not return a Matrix"
+    assert type(top_ones - left_ones.T()) == type(m.zeroes(2,2)), "Error: Your __sub__ function does not return a Matrix"
 
     print("Congratulations! All tests pass. Your Matrix class is working as expected.")
 
@@ -80,7 +80,7 @@ def equal(m1, m2):
     for r1, r2 in zip(m1.g, m2.g):
         for v1, v2 in zip(r1, r2):
             if abs(v1 - v2) > 0.0001:
-                print(abs(v1 - v2))
+
                 return False
     return True
 
